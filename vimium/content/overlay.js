@@ -22,6 +22,15 @@ var Vimium = {
 			var doc = gBrowser.contentDocument;
 			doc.defaultView.scrollTo(0, doc.body.scrollHeight)
 		},
+                'x': function() {
+                        gBrowser.removeCurrentTab();
+                },
+                'gt': function() {
+                        gBrowser.tabContainer.advanceSelectedTab(1, true);
+                },
+                'gT': function() {
+                        gBrowser.tabContainer.advanceSelectedTab(-1, true);
+                },
 	},
 
 	// Vimium
