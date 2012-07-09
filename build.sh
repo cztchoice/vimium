@@ -1,2 +1,3 @@
 #!/bin/bash
-cd ./vimium & zip -r ../vimium.xpi . --exclude="*.xcf" --exclude="*.swp" --exclude="*.git/*" --exclude="tags"
+cd ./vimium 
+zip -r ../vimium.xpi . -x="*.xcf" -x="*.swp" -x="*.git/*" -x="tags"
