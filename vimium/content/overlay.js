@@ -12,8 +12,14 @@ var Vimium = {
 		'yy': function() { Vimium.copyCallback(null, 'location'); },
 		'j': function() { gBrowser.contentDocument.defaultView.scrollBy(0,19); },
 		'k': function() { gBrowser.contentDocument.defaultView.scrollBy(0,-19); },
-		'h': function() { gBrowser.contentDocument.defaultView.scrollBy(-19,0); },
-		'l': function() { gBrowser.contentDocument.defaultView.scrollBy(19,0); },
+		'h': function() { gBrowser.mTabContainer.advanceSelectedTab(-1,true); },
+		'l': function() { gBrowser.mTabContainer.advanceSelectedTab(1,true); },
+		'u': function() { gBrowser.undoRemoveTab(); },
+		'r': function() { gBrowser.reload(); },
+		'x': function() { gBrowser.removeCurrentTab(); },
+		'H': function() { gBrowser.goBack(); },
+		'L': function() { gBrowser.goFoward(); },
+		't': function() { gBrowser.selectedTab = gBrowser.loadOneTab("about:newtab",null,null,null,false,false);  },
 		'gg': function() { 
 			var doc = gBrowser.contentDocument;
 			doc.defaultView.scrollTo(0, 0)
@@ -22,15 +28,14 @@ var Vimium = {
 			var doc = gBrowser.contentDocument;
 			doc.defaultView.scrollTo(0, doc.body.scrollHeight)
 		},
-                'x': function() {
-                        gBrowser.removeCurrentTab();
-                },
-                'gt': function() {
-                        gBrowser.tabContainer.advanceSelectedTab(1, true);
-                },
-                'gT': function() {
-                        gBrowser.tabContainer.advanceSelectedTab(-1, true);
-                },
+                /*
+                 *'gt': function() {
+                 *        gBrowser.mTabContainer.advanceSelectedTab(1, true);
+                 *},
+                 *'gT': function() {
+                 *        gBrowser.mTabContainer.advanceSelectedTab(-1, true);
+                 *},
+                 */
 	},
 
 	// Vimium
