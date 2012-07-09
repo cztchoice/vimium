@@ -10,10 +10,10 @@ var Vimium = {
 		'F': function() { Vimium.activateMode(Vimium.activateCallback, true) },
 		'yf': function() { Vimium.activateMode(Vimium.copyCallback, 'link') },
 		'yy': function() { Vimium.copyCallback(null, 'location'); },
-		'j': function() { gBrowser.contentDocument.defaultView.scrollBy(0,19); },
-		'k': function() { gBrowser.contentDocument.defaultView.scrollBy(0,-19); },
-		'h': function() { gBrowser.mTabContainer.advanceSelectedTab(-1,true); },
-		'l': function() { gBrowser.mTabContainer.advanceSelectedTab(1,true); },
+		'j': function() { gBrowser.contentDocument.defaultView.scrollBy(0,25); },
+		'k': function() { gBrowser.contentDocument.defaultView.scrollBy(0,-25); },
+		'h': function() { gBrowser.tabContainer.advanceSelectedTab(-1,true); },
+		'l': function() { gBrowser.tabContainer.advanceSelectedTab(1,true); },
 		'u': function() { gBrowser.undoRemoveTab(); },
 		'r': function() { gBrowser.reload(); },
 		'x': function() { gBrowser.removeCurrentTab(); },
@@ -28,15 +28,15 @@ var Vimium = {
 			var doc = gBrowser.contentDocument;
 			doc.defaultView.scrollTo(0, doc.body.scrollHeight)
 		},
-                /*
-                 *'gt': function() {
-                 *        gBrowser.mTabContainer.advanceSelectedTab(1, true);
-                 *},
-                 *'gT': function() {
-                 *        gBrowser.mTabContainer.advanceSelectedTab(-1, true);
-                 *},
-                 */
-	},
+        /*
+         *'gt': function() {
+         *        gBrowser.tabContainer.advanceSelectedTab(1, true);
+         *},
+         *'gT': function() {
+         *        gBrowser.tabContainer.advanceSelectedTab(-1, true);
+         *},
+         */
+    },
 
 	// Vimium
 	linkHintCharacters: "sadfjklewcmpgh",
