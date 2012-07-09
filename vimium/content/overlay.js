@@ -18,8 +18,8 @@ var Vimium = {
 		'r': function() { gBrowser.reload(); },
 		'x': function() { gBrowser.removeCurrentTab(); },
 		'H': function() { gBrowser.goBack(); },
-		'L': function() { gBrowser.goFoward(); },
-		't': function() { gBrowser.selectedTab = gBrowser.loadOneTab("about:newtab",null,null,null,false,false);  },
+		'L': function() { gBrowser.goForward(); },
+		//'t': function() { gBrowser.selectedTab = gBrowser.loadOneTab("about:newtab",null,null,null,false,false);  },
 		'gg': function() { 
 			var doc = gBrowser.contentDocument;
 			doc.defaultView.scrollTo(0, 0)
