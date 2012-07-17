@@ -17,7 +17,7 @@
       <Description>
         <em:id>{c252a109-6e4d-46c2-992b-c69f9f23a272}</em:id>
         <em:minVersion>3.6</em:minVersion>
-        <em:maxVersion>15.0a1</em:maxVersion>
+        <em:maxVersion>13.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
